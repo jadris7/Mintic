@@ -16,7 +16,13 @@ public class App {
         perro1.comer();
         perro1.dormir();
         perro1.ladrar();
-    
+
+        //instanciar la clase rectangulo
+        Rectangulo rectangulo1 = new Rectangulo();
+        rectangulo1.alto = 5;
+        rectangulo1.ancho = 10;
+        float resultado = rectangulo1.area();
+        System.out.println("El área del rectángulo es: "+resultado);
     }
 }
 
@@ -26,12 +32,12 @@ class Perro{
     String raza;
     int edad;
 
-    //void no hay que instanciar, crear métodos, inician en minúscula
+    //void no hay que retornar valores, crear métodos, inician en minúscula
 
-    void establecerAtributos(String nombrePerro, String razaPerro, int edadPerro){
-        nombre = nombrePerro;
-        raza = razaPerro;
-        edad = edadPerro;
+    void establecerAtributos(String nombre, String raza, int edad){
+        this.nombre = nombre;
+        this.raza = raza;
+        this.edad = edad;
     }
 
     void comer(){
@@ -44,5 +50,14 @@ class Perro{
 
     void ladrar(){
         System.out.println("El perro está ladrando");
+    }
+}
+
+class Rectangulo{
+    float ancho;
+    float alto;
+
+    float area(){
+        return(this.ancho * this.alto);
     }
 }
