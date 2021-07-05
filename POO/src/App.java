@@ -23,6 +23,14 @@ public class App {
         rectangulo1.ancho = 10;
         float resultado = rectangulo1.area();
         System.out.println("El área del rectángulo es: "+resultado);
+    
+        //Instancia clase usuario
+        Usuario usuario1 = new Usuario();
+        usuario1.nombreUsuario = "Adriana";
+        usuario1.setClave("adriana123");
+
+        usuario1.saludo();
+        System.out.println("la clave es: "+ usuario1.getClave());
     }
 }
 
@@ -59,5 +67,26 @@ class Rectangulo{
 
     float area(){
         return(this.ancho * this.alto);
+    }
+}
+
+//crear otra clase creando los atributos privados (recomendado)
+//y uno público para revisar comportamiento
+
+class Usuario{
+    public String nombreUsuario;
+    private String clave;
+
+    //Getter ->> permite obtener un valor de un atributo privado
+    public String getClave(){
+        return this.clave;
+    }
+    //Setter ->> permite fijar el valor de un atributo privado
+    public void setClave(String clave){
+        this.clave = clave;
+    }
+
+    public void saludo(){
+        System.out.println("El nombre de usuario es: "+nombreUsuario);
     }
 }
