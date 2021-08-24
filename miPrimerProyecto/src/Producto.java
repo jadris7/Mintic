@@ -6,5 +6,6 @@ public class Producto {
     
     public void mostrar(){
         System.out.println("El nombre es: "+nombre+", el precio:"+ precio);
+        System.out.println("Fin")
     }
 }

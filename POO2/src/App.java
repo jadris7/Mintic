@@ -22,6 +22,7 @@ public class App {
         user1.mostrarDatos();
         user2.mostrarDatos();
         user3.mostrarDatos();
+        System.out.println("----------------------------------");
 
         //imprimir metodo Perimetro 
         System.out.println("El perimetro es: "+Figura.perimetro(3));
